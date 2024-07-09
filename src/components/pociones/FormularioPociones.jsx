@@ -12,9 +12,11 @@ export const FormularioPociones= ({agregarPocion})=>{
     }
     return(
         <form onSubmit={handleSubmit}>
-            <input type="text" value={nuevaPocion} placeholder="Nueva Poción" onChange={(e) => setNuevaPocion(e.target.value)}/>
+            <input type="text" value={nuevaPocion}
+            placeholder="Nueva Poción"
+            onChange={(e) => setNuevaPocion(e.target.value)}/>
             <button type="submit">Agregar</button>
         </form>
-    )
+    )   
 }
 
