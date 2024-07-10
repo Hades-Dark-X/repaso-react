@@ -25,7 +25,6 @@ export const ListaPersonajes= ()=> {
   return (
     <div>
       <h2>Listado de Personajes</h2>
-      <p>Listado de Personajes</p>
       {cargando ? (
         <p>Cargando Personajes...</p>
       ) : (

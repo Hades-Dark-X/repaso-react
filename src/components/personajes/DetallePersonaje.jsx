@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { fetchPersonajesById } from "./api"; // Importa la función fetchPersonajeById
+import { fetchPersonajesById } from "./Api";
 
-const DetallePersonaje= ()=> {
+export const DetallePersonaje= ()=> {
     const { id } = useParams();
     const [loading, setLoading] = useState(true);
     const [personaje, setPersonaje] = useState({});
@@ -37,5 +37,3 @@ const DetallePersonaje= ()=> {
         );
     }
 }
-
-export default DetallePersonaje;

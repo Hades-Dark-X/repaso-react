@@ -1,7 +1,7 @@
 import Casa from './Casa';
 import casas from './DatosCasas';
 
-const ListaCasas= ()=>{
+export const ListaCasas= ()=>{
     return(
         <div>
             {casas.map((casa, index)=> (
@@ -18,5 +18,3 @@ const ListaCasas= ()=>{
         </div>
     )
 }
-
-export default ListaCasas

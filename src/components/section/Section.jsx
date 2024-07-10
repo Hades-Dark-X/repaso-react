@@ -2,7 +2,7 @@ import "./Section.css"
 import hogwarts from "../../assets/img/hogwarts.jpg"
 import Button from "../button/Button"
 
-const Section= ()=>{
+export const Section= ()=>{
     return(
         <section className="section">
             <h2>Información sobre Hogwarts</h2>
@@ -12,5 +12,3 @@ const Section= ()=>{
         </section>
     )
 }
-
-export default Section

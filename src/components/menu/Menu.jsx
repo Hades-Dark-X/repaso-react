@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
 import './Menu.css'
 
-const Menu= ()=>{
+export const Menu= ()=>{
     return(
         <nav className="menu">
             <ul>
@@ -13,5 +13,3 @@ const Menu= ()=>{
         </nav>
     )
 }
-
-export default Menu
