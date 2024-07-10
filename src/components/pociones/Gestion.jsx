@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
 import { FormularioPociones } from "./FormularioPociones"
 import {ListaPociones} from "./ListaPociones"
+import "./Pociones.css"
+
 
 export const Gestion = () => {
     /* Carga pociones almacenadas en localStorage */

@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react";
-import { fetchPersonajes } from "./api";
+import {fetchPersonajes} from "./Api"
+import { Link } from "react-router-dom";
+import './Personajes.css'
 
-function ListaPersonajes() {
+export const ListaPersonajes= ()=> {
   const [personajes, setPersonajes] = useState([]);
-  const [cargando, setCargando] = useState(true); // Se cambió "loading" a "cargando" para mejor legibilidad en español
+  const [cargando, setCargando] = useState(true); 
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await fetchPersonajes();
-        setPersonajes(data); // Actualizar el estado de "personajes" con los datos obtenidos
+        const data = await fetchPersonajes()
+        setPersonajes(data)
         setCargando(false);
       } catch (error) {
-        console.error(error); // Manejar el error de forma adecuada
+        console.error(error)
         setCargando(false);
       }
     };
@@ -29,12 +31,11 @@ function ListaPersonajes() {
       ) : (
         <ul className="personajes-lista">
           {personajes.map((personaje) => (
-            <li key={personaje.name} className="personaje-item">
+            <li key={personaje.id} className="personaje-item">
               <h3>{personaje.name}</h3>
               <p>Casa: {personaje.house}</p>
               <p>Actor: {personaje.actor}</p>
-              <a href={`/DetallesPersonajes/${personaje.id}`}>Ver Detalle</a>
-              {/* Usar etiqueta 'a' para la navegación */}
+              <Link to={`/detallePersonaje/${personaje.id}`}>Ver Detalles</Link>
             </li>
           ))}
         </ul>
@@ -43,4 +44,3 @@ function ListaPersonajes() {
   );
 }
 
-export default ListaPersonajes;

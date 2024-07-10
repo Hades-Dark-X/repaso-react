@@ -6,8 +6,7 @@ import ListaCasas from './components/casas/ListaCasas'
 import Section from './components/section/Section'
 import Footer from './components/footer/Footer'
 import { Gestion } from './components/pociones/Gestion'
-
-
+import { ListaPersonajes } from './components/personajes/ListaPersonajes'
 
 function App() {
   return (
@@ -19,6 +18,7 @@ function App() {
           <Route path='/' element={<Section/>}></Route>
           <Route path='/casas' element={<ListaCasas/>}></Route>
           <Route path='/pociones' element={<Gestion/>}></Route>
+          <Route path='/personajes' element={<ListaPersonajes/>}></Route>
         </Routes>
       </main>
       
